@@ -4,7 +4,6 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  font: Roboto;
 }
 
 * {
@@ -17,5 +16,13 @@ h3,
 h4,
 h5,
 h6 {
-  font: Shrikhand;
+  font-family: "Shrikhand", sans-serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+.number {
+  background-color: #9356dc;
 }
