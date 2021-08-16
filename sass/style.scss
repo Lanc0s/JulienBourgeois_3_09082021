@@ -3,9 +3,12 @@ html,
 body {
   background-color: #ffffff;
   height: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 100%;
+  max-width: 768px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
 }
 * {
   box-sizing: border-box;
@@ -22,9 +25,6 @@ h4,
 h5,
 h6 {
   font-family: "Shrikhand", sans-serif;
-}
-p {
-  font-family: "Roboto", sans-serif;
 }
 /*Logo*/
 
@@ -48,21 +48,33 @@ p {
   width: 100%;
   font-size: 0.8em;
   &__pill {
+    display: flex;
+    padding-left: 2em;
+    align-items: baseline;
     position: relative;
     background-color: #f6f6f6;
     width: 80%;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    &__number {
+      position: absolute;
+      left: 0;
+      top: 12px;
+      text-align: center;
+      width: 1.2em;
+      height: 1.2em;
+      color: white;
+      background-color: $colorprimaire;
+      border-radius: 50%;
+    }
+    > i {
+      color: grey;
+      padding-right: 1em;
+    }
+    > .fa-store {
+      color: $colorprimaire;
+    }
   }
-}
-.number {
-  position: absolute;
-  text-align: center;
-  width: 1.2em;
-  height: 1.2em;
-  color: white;
-  background-color: $colorprimaire;
-  border-radius: 50%;
 }
 .btn-violet {
   text-align: center;
@@ -76,6 +88,7 @@ p {
     $colorprimaire
   );
   p {
+    display: inline;
     vertical-align: middle;
   }
 }
@@ -92,11 +105,21 @@ p {
     background-color: white;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     border-radius: 20px/20px;
-    border: 4px solid white;
-    border: 4px solid white;
+    position: relative;
+    &__description {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-end;
+      padding-left: 1em;
+      &__coeur {
+        height: 100%;
+      }
+      > i {
+        color: black;
+      }
+    }
     &--img {
       display: block;
-      position: relative;
       margin: 0;
       width: 100%;
       height: 100px;
@@ -106,8 +129,14 @@ p {
       padding: 0;
       &__newLogo {
         position: absolute;
-        top: 2em;
-        left: 19em;
+        top: 0em;
+        left: 17em;
+        background-color: $colortertiaire;
+        color: #2ac9a1;
+        height: 3em;
+        width: 6em;
+        font-size: small;
+        text-align: center;
       }
     }
   }
@@ -118,6 +147,9 @@ p {
 /*Footer*/
 /**************************************/
 @media screen and (max-width: 768px) {
+  .body {
+    font-size: small;
+  }
   .header {
     margin: 100em;
   }

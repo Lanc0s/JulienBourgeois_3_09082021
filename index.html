@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <title>Oh My Food</title>
   </head>
   <body>
@@ -37,18 +43,18 @@
     <main>
       <div class="acc-manual">
         <div class="acc-manual__pill choose">
-          <div class="number 1">1</div>
-          <div class="LOGO FONT AWESOME A CHOPER ! ! !"></div>
+          <div class="acc-manual__pill__number 1">1</div>
+          <i class="fas fa-mobile-alt"></i>
           <p>Choisissez un restaurant</p>
         </div>
         <div class="acc-manual__pill compose">
-          <div class="number 2">2</div>
-          <div class="LOGO FONT AWESOME A CHOPER ! ! !"></div>
+          <div class="acc-manual__pill__number 2">2</div>
+          <i class="fas fa-list-ul"></i>
           <p>Composez votre menu</p>
         </div>
         <div class="acc-manual__pill enjoy">
-          <div class="number 3">3</div>
-          <div class="LOGO FONT AWESOME A CHOPER ! ! !"></div>
+          <div class="acc-manual__pill__number 3">3</div>
+          <i class="fas fa-store"></i>
           <p>Dégustez au restaurant</p>
         </div>
       </div>
@@ -59,12 +65,17 @@
             alt="/"
             class="acc-restaurant__card--img"
           />
-          <!--<div class="acc-restaurant__card--img__newLogo"><p>Nouveau</p></div>-->
-
+          <div class="acc-restaurant__card--img__newLogo">
+            <p><strong>Nouveau</strong></p>
+          </div>
           <div class="acc-restaurant__card__description">
-            <h6>La palette du goût</h6>
-            <p>Ménilmontant</p>
-            <div class="xoxocoeurcoeurlovelove"></div>
+            <div class="acc-restaurant__card__description__texte">
+              <h4>La palette du goût</h4>
+              <p>Ménilmontant</p>
+            </div>
+            <div class="acc-restaurant__card__description__coeur">
+              <i class="far fa-heart"></i>
+            </div>
           </div>
         </div>
         <div class="acc-restaurant__card">
@@ -73,11 +84,12 @@
             alt=""
             class="acc-restaurant__card--img"
           />
-          <!--<div class="acc-restaurant__card--img__newLogo"><p>Nouveau</p></div>-->
+          <div class="acc-restaurant__card--img__newLogo">
+            <p><strong>Nouveau</strong></p>
+          </div>
           <div class="acc-restaurant__card__description">
-            <h6>La palette du goût</h6>
-            <p>Ménilmontant</p>
-            <div class="xoxocoeurcoeurlovelove"></div>
+            <h4>La palette du goût</h4>
+            <p>Ménilmontant <i class="far fa-heart"></i></p>
           </div>
         </div>
         <div class="acc-restaurant__card">
@@ -87,9 +99,9 @@
             class="acc-restaurant__card--img"
           />
           <div class="acc-restaurant__card--description">
-            <h6>La palette du goût</h6>
+            <h4>La palette du goût</h4>
             <p>Ménilmontant</p>
-            <div class="xoxocoeurcoeurlovelove"></div>
+            <i class="far fa-heart"></i>
           </div>
         </div>
         <div class="acc-restaurant__card">
@@ -100,9 +112,8 @@
               class="acc-restaurant__card--img"
             />
             <div class="acc-restaurant__card--description">
-              <h6>La palette du goût</h6>
+              <h4>La palette du goût</h4>
               <p>Ménilmontant</p>
-              <div class="xoxocoeurcoeurlovelove"></div>
             </div>
           </div>
         </div>
