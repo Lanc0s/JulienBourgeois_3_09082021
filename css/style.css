@@ -68,6 +68,19 @@ p {
   border-radius: 50%;
 }
 
+.btn-violet {
+  text-align: center;
+  width: 15em;
+  height: 2em;
+  border-radius: 20px/20px;
+  color: white;
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+}
+
+.btn-violet p {
+  vertical-align: middle;
+}
+
 /*Cards Restaurant*/
 .acc-restaurant {
   display: flex;
@@ -110,8 +123,5 @@ p {
 @media screen and (max-width: 768px) {
   .header {
     margin: 100em;
-  }
-  .number {
-    background-color: #ff79da;
   }
 }

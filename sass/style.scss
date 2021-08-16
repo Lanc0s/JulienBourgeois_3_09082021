@@ -29,6 +29,7 @@ p {
 /*Logo*/
 
 /*Navbar & Manual*/
+
 #head-logo {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
@@ -63,7 +64,23 @@ p {
   background-color: $colorprimaire;
   border-radius: 50%;
 }
+.btn-violet {
+  text-align: center;
+  width: 15em;
+  height: 2em;
+  border-radius: 20px/20px;
+  color: white;
+  background-image: linear-gradient(
+    to bottom right,
+    $colorsecondaire,
+    $colorprimaire
+  );
+  p {
+    vertical-align: middle;
+  }
+}
 /*Cards Restaurant*/
+
 .acc-restaurant {
   display: flex;
   flex-flow: row wrap;
@@ -95,6 +112,7 @@ p {
     }
   }
 }
+
 /*Menus*/
 
 /*Footer*/
@@ -102,8 +120,5 @@ p {
 @media screen and (max-width: 768px) {
   .header {
     margin: 100em;
-  }
-  .number {
-    background-color: $colorsecondaire;
   }
 }
