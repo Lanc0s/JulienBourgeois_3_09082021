@@ -152,6 +152,27 @@ h6 {
 
 /*Menus*/
 /*Footer*/
+.pied {
+  background-color: #353535;
+  display: flex;
+  flex-flow: wrap column;
+  padding: 2em;
+}
+
+.pied--img {
+  width: 100px;
+  filter: invert(100%);
+}
+
+.pied--liste {
+  color: white;
+  height: 55px;
+}
+
+.pied .legal {
+  margin-top: 1em;
+}
+
 /**************************************/
 @media screen and (max-width: 768px) {
   .body {
