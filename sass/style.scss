@@ -39,6 +39,19 @@ h6 {
 }
 .nav-localisation {
   background-color: #eaeaea;
+  text-align: center;
+  &__search {
+    border: none;
+    background-color: #eaeaea;
+    color: black;
+  }
+}
+.nav-explore {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .acc-manual {
   display: flex;
