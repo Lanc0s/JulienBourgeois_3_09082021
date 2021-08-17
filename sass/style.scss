@@ -65,7 +65,11 @@ Navbar & Manual
 }
 .nav-localisation {
   background-color: #eaeaea;
-  text-align: center;
+  height: 2em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   &__search {
     border: none;
     background-color: #eaeaea;
@@ -131,6 +135,13 @@ Navbar & Manual
     vertical-align: middle;
   }
 }
+
+.titre {
+  margin-left: 1em;
+  &__restaurant {
+    margin-bottom: -2em;
+  }
+}
 /************************************************************
 ************************************************************
 ************************************************************
@@ -146,7 +157,7 @@ Cards Restaurant
   &__card {
     width: 20em;
     height: 250px;
-    margin: 1.5em;
+    margin: 1em;
     padding: 0;
     background-color: white;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
