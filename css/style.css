@@ -40,7 +40,7 @@ Logo
 ***************************************************************************
 ***************************************************************************
 ***************************************************/
-.titre-restaurant {
+.titreRestaurant {
   font-family: Shrikhand;
 }
 
@@ -52,15 +52,7 @@ Navbar & Manual
 ***************************************************************************
 ***************************************************************************
 ***************************************************/
-#head-logo {
-  display: flex;
-  justify-content: center;
-  box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  z-index: 1;
-}
-
-.head-wrap {
+.headWrap {
   display: flex;
   flex-flow: wrap column;
   justify-content: center;
@@ -68,22 +60,58 @@ Navbar & Manual
   width: 100%;
 }
 
-.nav-localisation {
+.headWrap--img {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  padding: 0;
+}
+
+.headLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  z-index: 1;
+}
+
+.headLogo--fleche {
+  margin-left: 1em;
+  margin-right: -2em;
+}
+
+.headLogo--img {
+  width: 100%;
+  height: 20px;
+}
+
+.navLocalisation {
   background-color: #eaeaea;
   height: 2em;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  font-size: small;
 }
 
-.nav-localisation__search {
+.navLocalisation > i {
+  padding-right: 1em;
+  color: #747474;
+}
+
+.navLocalisation__search {
   border: none;
   background-color: #eaeaea;
   color: black;
+  padding-left: 1em;
 }
 
-.nav-explore {
+.navExplore {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -91,7 +119,11 @@ Navbar & Manual
   text-align: center;
 }
 
-.acc-manual {
+.navExplore__container {
+  width: 66%;
+}
+
+.accManual {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,18 +132,19 @@ Navbar & Manual
   font-size: 0.8em;
 }
 
-.acc-manual__pill {
+.accManual__pill {
   display: flex;
   padding-left: 2em;
   align-items: baseline;
   position: relative;
   background-color: #f6f6f6;
-  width: 80%;
+  width: 30%;
   border-radius: 15px;
+  margin-bottom: 1em;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.acc-manual__pill__number {
+.accManual__pill__number {
   position: absolute;
   left: 0;
   top: 12px;
@@ -123,16 +156,16 @@ Navbar & Manual
   border-radius: 50%;
 }
 
-.acc-manual__pill > i {
+.accManual__pill > i {
   color: grey;
   padding-right: 1em;
 }
 
-.acc-manual__pill > .fa-store {
+.accManual__pill > .fa-store {
   color: #9356dc;
 }
 
-.btn-violet {
+.btnViolet {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,7 +176,7 @@ Navbar & Manual
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
 
-.btn-violet p {
+.btnViolet p {
   display: inline;
   vertical-align: middle;
 }
@@ -164,12 +197,14 @@ Cards Restaurant
 ***************************************************************************
 ***************************************************************************
 ***************************************************/
-.acc-restaurant {
+.accRestaurant {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.acc-restaurant__card {
+.accRestaurant__card {
   width: 20em;
   margin: 1em;
   padding: 0;
@@ -179,30 +214,35 @@ Cards Restaurant
   position: relative;
 }
 
-.acc-restaurant__card__description {
+.accRestaurant__card__description {
   display: flex;
   flex-flow: row wrap;
-  align-items: flex-end;
+  align-items: center;
   padding-left: 1em;
 }
 
-.acc-restaurant__card__description__texte h4 {
-  margin-bottom: -12px;
+.accRestaurant__card__description__texte h4 {
+  margin-bottom: -10px;
 }
 
-.acc-restaurant__card__description__texte p {
-  margin-bottom: -1px;
+.accRestaurant__card__description__texte p {
+  margin-bottom: 10px;
 }
 
-.acc-restaurant__card__description__coeur {
-  height: 100%;
+.accRestaurant__card__description__coeur {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  padding-right: 1em;
+  font-size: 1.3em;
 }
 
-.acc-restaurant__card__description > i {
+.accRestaurant__card__description > i {
   color: black;
 }
 
-.acc-restaurant__card--img {
+.accRestaurant__card--img {
   display: block;
   margin: 0;
   width: 100%;
@@ -213,29 +253,22 @@ Cards Restaurant
   padding: 0;
 }
 
-.acc-restaurant__card--img__newLogo {
+.accRestaurant__card--img__newLogo {
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 0em;
+  top: 1em;
   left: 17em;
   background-color: #99e2d0;
-  color: #2ac9a1;
-  height: 3em;
+  color: #008766;
+  height: 2.5em;
   width: 6em;
   font-size: small;
-  text-align: center;
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-/************************************************************
-************************************************************
-************************************************************
-Menus
-*************************************************************************
-***************************************************************************
-***************************************************************************
-***************************************************/
 /************************************************************
 ************************************************************
 ************************************************************
@@ -268,6 +301,39 @@ Footer
 /************************************************************
 ************************************************************
 ************************************************************
+Restaurant's pages
+*************************************************************************
+***************************************************************************
+***************************************************************************
+***************************************************/
+.restaurantMenu {
+  display: flex;
+  position: relative;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  /*
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+  */
+  border-radius: 1em;
+  z-index: 1;
+  margin-top: -3em;
+  background-color: #ffffff;
+}
+
+.likedHeart {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 2em;
+  padding-right: 1em;
+  font-size: 1.3em;
+}
+
+/************************************************************
+************************************************************
+************************************************************
 ************************************************************************
 *************************************************************************
 ***************************************************************************
@@ -279,5 +345,8 @@ Footer
   }
   .header {
     margin: 100em;
+  }
+  .accManual__pill {
+    width: 80% !important;
   }
 }

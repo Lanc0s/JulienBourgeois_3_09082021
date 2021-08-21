@@ -12,6 +12,10 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
@@ -22,14 +26,28 @@
   <body>
     <header>
       <div class="headWrap">
-        <div id="headLogo">
-          <a href="index.html"> <i class="fas fa-arrow-left"></i></a>
-          <img src="images/logo/ohmyfood@2x.svg" alt="Home" />
+        <div class="headLogo">
+          <div class="headLogo--fleche">
+            <a href="index.html"> <i class="fas fa-arrow-left"></i></a>
+          </div>
+          <img
+            src="images/logo/ohmyfood@2x.svg"
+            alt="Home"
+            class="headLogo--img"
+          />
         </div>
+        <img
+          src="images/restaurants/enchantee.jpg"
+          alt="/"
+          class="headWrap--img"
+        />
       </div>
     </header>
     <main>
-      <div class="titreRestaurant">La note enchantée</div>
+      <div class="restaurantMenu">
+        <div class="titreRestaurant"><h2>La note enchantée</h2></div>
+        <div class="likedHeart"><i class="far fa-heart"></i></div>
+      </div>
     </main>
   </body>
 </html>

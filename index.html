@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -18,8 +24,12 @@
     <div class="whole-page">-->
     <header>
       <div class="headWrap">
-        <div id="headLogo">
-          <img src="images/logo/ohmyfood@2x.svg" alt="Home" />
+        <div class="headLogo">
+          <img
+            src="images/logo/ohmyfood@2x.svg"
+            class="headLogo--img"
+            alt="Home"
+          />
         </div>
         <nav>
           <div class="navLocalisation">
@@ -31,10 +41,13 @@
             />
           </div>
           <div class="navExplore">
-            <h2>Réservez le menu qui vous convient</h2>
-            <p>
-              Découvrez des restaurants d'exception, sélectionnés par nos soins.
-            </p>
+            <div class="navExplore__container">
+              <h3>Réservez le menu qui vous convient</h3>
+              <p>
+                Découvrez des restaurants d'exception, sélectionnés par nos
+                soins.
+              </p>
+            </div>
             <div class="navExplore__btn btnViolet">
               <p>Explorer nos restaurants</p>
             </div>
@@ -86,7 +99,7 @@
               <h4>La palette du goût</h4>
               <p>Ménilmontant</p>
             </div>
-            <div class="accRestaurant__card__description__coeur">
+            <div class="accRestaurant__card__description__coeur likedHeart">
               <i class="far fa-heart"></i>
             </div>
           </div>
