@@ -41,7 +41,7 @@ Logo
 ***************************************************************************
 ***************************************************/
 .titreRestaurant {
-  font-family: Shrikhand;
+  font-family: "Shrikhand", sans-serif;
 }
 
 /************************************************************
@@ -306,20 +306,19 @@ Restaurant's pages
 ***************************************************************************
 ***************************************************************************
 ***************************************************/
-.restaurantMenu {
+/*Head*/
+.restaurantHead {
   display: flex;
   position: relative;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  /*
-  border-top-left-radius: 25%;
-  border-top-right-radius: 25%;
-  */
-  border-radius: 1em;
+  padding-left: 1.3em;
+  padding-right: 1.3em;
+  border-radius: 2em;
   z-index: 1;
   margin-top: -3em;
-  background-color: #ffffff;
+  background-color: #f6f6f6;
 }
 
 .likedHeart {
@@ -329,6 +328,56 @@ Restaurant's pages
   padding-left: 2em;
   padding-right: 1em;
   font-size: 1.3em;
+}
+
+/*Cards*/
+.restaurantMain {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-left: -1em;
+  margin-right: -1em;
+}
+
+.restaurantMenu {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.restaurantMenu__container {
+  display: flex;
+  width: 100%;
+  flex-flow: column wrap;
+}
+
+.restaurantMenu__container--titre span {
+  border-bottom: solid 3px #99e2d0;
+}
+
+.restaurantMenu__container--assiette {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  background-color: white;
+  width: 100%;
+  border-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  font-size: 0.9em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.restaurantMenu__container--assiette span {
+  font-size: 0.8em;
+}
+
+.restaurantMenu__container--assiettePrix {
+  align-self: flex-end;
 }
 
 /************************************************************
