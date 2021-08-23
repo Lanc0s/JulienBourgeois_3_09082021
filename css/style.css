@@ -312,6 +312,7 @@ Restaurant's pages
 ***************************************************/
 /*Head*/
 .restaurantHead {
+  width: 22.5em;
   display: flex;
   position: relative;
   flex-flow: row wrap;
