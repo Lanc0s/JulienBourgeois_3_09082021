@@ -82,7 +82,9 @@ Navbar & Manual
   &--img {
     width: 100%;
     height: 20px;
-    margin-right: 2em;
+    &.restaurant {
+      margin-right: 2em;
+    }
   }
 }
 .navIndex {
@@ -204,8 +206,7 @@ Cards Restaurant
     border-radius: 20px/20px;
     position: relative;
     transform: scale(1);
-    transition-property: transform;
-    transition-duration: 0.3s;
+    transition: transform 0.4s;
     &:hover {
       transform: scale(1.02);
     }
@@ -216,10 +217,11 @@ Cards Restaurant
       padding-left: 1em;
       &__texte {
         h4 {
+          margin-top: 10px;
           margin-bottom: -10px;
         }
         p {
-          margin-bottom: 10px;
+          margin-bottom: 15px;
         }
       }
       &__coeur {
@@ -297,25 +299,23 @@ Restaurant's pages
 
 /*Head*/
 .restaurantHead {
-  width: 93%;
   display: flex;
   position: relative;
-  flex-flow: row wrap;
+  width: 100%;
   justify-content: center;
   align-items: center;
   padding-left: 1.3em;
   padding-right: 1.3em;
   border-radius: 2em;
   z-index: 1;
-  margin-top: -3em;
   background-color: #f6f6f6;
 }
 .likedHeart {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-left: 2em;
-  padding-right: 1em;
+  padding-left: 5em;
+  flex: 0;
   font-size: 1.3em;
 }
 /*Cards*/
@@ -324,6 +324,10 @@ Restaurant's pages
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  margin-top: -3em;
+  position: relative;
 }
 .restaurantMenu {
   display: flex;
@@ -337,30 +341,49 @@ Restaurant's pages
     flex-flow: column wrap;
     &--titre {
       & span {
-        border-bottom: solid 3px $colortertiaire;
+        display: inline-block;
+        &:hover {
+          margin-bottom: -3px;
+          border-bottom: solid 3px $colortertiaire;
+          transition: transform 2s ease-in-out;
+          transform-origin: 0% 50%;
+        }
       }
     }
     &--assiette {
       display: flex;
-      align-items: stretch;
-      justify-content: space-between;
-      margin-bottom: 1em;
-      background-color: white;
+      flex-flow: row wrap;
       width: 100%;
-      border-radius: 1em;
-      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-      font-size: 0.9em;
+      height: 100%;
       padding-left: 1em;
       padding-right: 1em;
-      & span {
-        font-size: 0.8em;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      border-radius: 0.8em;
+      margin-bottom: 1em;
+      p,
+      h5 {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        font-family: "Roboto", sans-serif;
+        font-size: 0.9em;
+      }
+      &Description {
+        flex: 1;
+        padding-right: 1em;
+        /*UN SEUL OU LES DEUX ? */
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       &Prix {
+        font-size: 0.8em;
+        height: 100%;
         align-self: flex-end;
       }
     }
   }
 }
+
 /************************************************************
 ************************************************************
 ************************************************************
@@ -369,14 +392,27 @@ Restaurant's pages
 ***************************************************************************
 ***************************************************************************
 ***************************************************/
-@media screen and (max-width: 768px) {
-  .body {
-    font-size: small;
-  }
+@media all and (max-width: 768px) {
   .header {
     margin: 100em;
   }
   .accManual__pill {
     width: 80% !important;
+  }
+  .likedHeart {
+    flex: 1;
+    padding-right: 1em;
+    padding-left: 0 !important;
+  }
+  .restaurantMenu {
+    width: 90%;
+    &__container {
+      &--assiette {
+        p,
+        h5 {
+          font-size: 1.05em !important;
+        }
+      }
+    }
   }
 }
