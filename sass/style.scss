@@ -17,6 +17,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -263,6 +264,7 @@ Cards Restaurant
     }
   }
 }
+
 /************************************************************
 ************************************************************
 ************************************************************
@@ -342,11 +344,13 @@ Restaurant's pages
     &--titre {
       & span {
         display: inline-block;
-        &:hover {
-          margin-bottom: -3px;
-          border-bottom: solid 3px $colortertiaire;
-          transition: transform 2s ease-in-out;
-          transform-origin: 0% 50%;
+        margin-bottom: -3px;
+        &::after {
+          content: "";
+          display: block;
+          border-bottom: 3px solid $colortertiaire;
+          margin-top: 0.2em;
+          width: 2em;
         }
       }
     }
@@ -361,6 +365,21 @@ Restaurant's pages
       box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
       border-radius: 0.8em;
       margin-bottom: 1em;
+      &:hover .restaurantMenu__container--assietteCheckBox {
+        animation: 4s logoWiggle;
+        animation-fill-mode: forwards;
+      }
+      &CheckBox > i {
+        background-color: $colortertiaire;
+        color: white;
+        height: 100%;
+        visibility: hidden;
+      }
+
+      /*
+        transform: rotate(-360deg);
+        transition: transform 500ms ease-in-out;
+        */
       p,
       h5 {
         margin-bottom: 5px;
@@ -376,11 +395,21 @@ Restaurant's pages
         text-overflow: ellipsis;
       }
       &Prix {
+        display: flex;
         font-size: 0.8em;
         height: 100%;
         align-self: flex-end;
       }
     }
+  }
+}
+@keyframes logoWiggle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -393,9 +422,11 @@ Restaurant's pages
 ***************************************************************************
 ***************************************************/
 @media all and (max-width: 768px) {
+  /*
   .header {
-    margin: 100em;
+    margin: 100em !important;
   }
+  */
   .accManual__pill {
     width: 80% !important;
   }
@@ -405,7 +436,7 @@ Restaurant's pages
     padding-left: 0 !important;
   }
   .restaurantMenu {
-    width: 90%;
+    width: 90% !important;
     &__container {
       &--assiette {
         p,

@@ -371,13 +371,15 @@ Restaurant's pages
 
 .restaurantMenu__container--titre span {
   display: inline-block;
+  margin-bottom: -3px;
 }
 
-.restaurantMenu__container--titre span:hover {
-  margin-bottom: -3px;
-  border-bottom: solid 3px #99e2d0;
-  transition: transform 2s ease-in-out;
-  transform-origin: 0% 50%;
+.restaurantMenu__container--titre span::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #99e2d0;
+  margin-top: 0.2em;
+  width: 2em;
 }
 
 .restaurantMenu__container--assiette {
@@ -391,6 +393,22 @@ Restaurant's pages
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border-radius: 0.8em;
   margin-bottom: 1em;
+  /*
+        transform: rotate(-360deg);
+        transition: transform 500ms ease-in-out;
+        */
+}
+
+.restaurantMenu__container--assiette:hover .restaurantMenu__container--assietteCheckBox {
+  animation: 4s logoWiggle;
+  animation-fill-mode: forwards;
+}
+
+.restaurantMenu__container--assietteCheckBox > i {
+  background-color: #99e2d0;
+  color: white;
+  height: 100%;
+  visibility: hidden;
 }
 
 .restaurantMenu__container--assiette p,
@@ -410,9 +428,20 @@ Restaurant's pages
 }
 
 .restaurantMenu__container--assiettePrix {
+  display: flex;
   font-size: 0.8em;
   height: 100%;
   align-self: flex-end;
+}
+
+@keyframes logoWiggle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 /************************************************************
@@ -424,9 +453,11 @@ Restaurant's pages
 ***************************************************************************
 ***************************************************/
 @media all and (max-width: 768px) {
+  /*
   .header {
-    margin: 100em;
+    margin: 100em !important;
   }
+  */
   .accManual__pill {
     width: 80% !important;
   }
@@ -436,10 +467,10 @@ Restaurant's pages
     padding-left: 0 !important;
   }
   .restaurantMenu {
-    width: 90%;
+    width: 90% !important;
   }
   .restaurantMenu__container--assiette p,
   .restaurantMenu__container--assiette h5 {
-    font-size: 1.05em !important;
+    font-size: 0.85em !important;
   }
 }
