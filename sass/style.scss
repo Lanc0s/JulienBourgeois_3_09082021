@@ -366,15 +366,17 @@ Restaurant's pages
       border-radius: 0.8em;
       margin-bottom: 1em;
       &:hover .restaurantMenu__container--assietteCheckBox {
-        animation: 4s logoWiggle;
-        animation-fill-mode: forwards;
+        animation: 0.5s slideIn forwards;
+        & i {
+          animation: 0.5s logoWiggle forwards;
+        }
       }
-      &CheckBox > i {
+      &CheckBox {
         background-color: $colortertiaire;
         color: white;
         height: 100%;
+        width: 0;
       }
-
       /*
         transform: rotate(-360deg);
         transition: transform 500ms ease-in-out;
@@ -403,12 +405,19 @@ Restaurant's pages
   }
 }
 @keyframes logoWiggle {
-  0% {
-    opacity: 0;
+  from {
+    transform: rotate(0deg);
   }
-  100% {
-    visibility: visible;
-    opacity: 1;
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 3em;
   }
 }
 
@@ -441,6 +450,12 @@ Restaurant's pages
         p,
         h5 {
           font-size: 0.85em !important;
+        }
+        &:active .restaurantMenu__container--assietteCheckBox {
+          animation: 0.5s slideIn forwards;
+          & i {
+            animation: 0.5s logoWiggle forwards;
+          }
         }
       }
     }
