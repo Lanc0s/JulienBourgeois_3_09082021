@@ -514,7 +514,7 @@ KEYFRAMES
 *********/
 @keyframes entrance {
   from {
-    transform: translateY(200px);
+    transform: translateY(2em);
     opacity: 0;
   }
   to {
