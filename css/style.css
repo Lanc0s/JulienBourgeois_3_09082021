@@ -52,6 +52,28 @@ Navbar & Manual
 ***************************************************************************
 ***************************************************************************
 ***************************************************/
+.loader {
+  background: white;
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: vanishes 5s forwards;
+  z-index: 1;
+}
+
+.loader--animation {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #9356dc;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
 .headWrap {
   display: flex;
   flex-flow: wrap column;
@@ -353,13 +375,11 @@ Restaurant's pages
 
 .unlikedHeart {
   position: absolute;
-  right: -1em;
 }
 
 .likedHeart {
   color: #9356dc;
   position: absolute;
-  right: -1em;
   opacity: 0;
 }
 
@@ -455,9 +475,14 @@ Restaurant's pages
 .restaurantMenu__container--assietteDescription {
   flex: 1;
   padding-right: 1em;
-  /*UN SEUL OU LES DEUX ? */
+  overflow: hidden;
+}
+
+.restaurantMenu__container--assietteDescription p,
+.restaurantMenu__container--assietteDescription h5 {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .restaurantMenu__container--assiettePrix {
@@ -512,6 +537,29 @@ KEYFRAMES
 ************************************************************
 ************************************************************************
 *********/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes vanishes {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 @keyframes entrance {
   from {
     transform: translateY(2em);
@@ -604,6 +652,12 @@ KEYFRAMES
   }
   .likedHeart {
     right: 0 !important;
+  }
+  .heartIcon:active .likedHeart {
+    opacity: 1;
+  }
+  .heartIcon:active .unlikedHeart {
+    opacity: 0;
   }
   .restaurantMenu {
     width: 90% !important;
