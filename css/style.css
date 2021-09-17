@@ -205,6 +205,10 @@ Navbar & Manual
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
 
+.btnViolet:hover {
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+}
+
 .btnViolet p {
   display: inline;
   vertical-align: middle;
@@ -645,13 +649,6 @@ KEYFRAMES
     flex: 1;
     padding-right: 1em;
     padding-left: 0 !important;
-  }
-  .unlikedHeart {
-    position: absolute;
-    right: 0 !important;
-  }
-  .likedHeart {
-    right: 0 !important;
   }
   .heartIcon:active .likedHeart {
     opacity: 1;
