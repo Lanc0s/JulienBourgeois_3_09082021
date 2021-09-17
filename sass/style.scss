@@ -197,8 +197,8 @@ Navbar & Manual
   &:hover {
     background-image: linear-gradient(
       to bottom right,
-      rgba(255, 121, 218, 30),
-      rgba(147, 86, 220, 30)
+      rgba(255, 121, 218, 0.7),
+      rgba(147, 86, 220, 0.7)
     );
   }
   p {
@@ -606,6 +606,13 @@ KEYFRAMES
   */
   .accManual__pill {
     width: 80% !important;
+  }
+  .btnViolet:active {
+    background-image: linear-gradient(
+      to bottom right,
+      rgba(255, 121, 218, 0.7),
+      rgba(147, 86, 220, 0.7)
+    );
   }
   .heartIcon {
     flex: 1;

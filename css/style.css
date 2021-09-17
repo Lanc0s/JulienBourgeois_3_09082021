@@ -206,7 +206,7 @@ Navbar & Manual
 }
 
 .btnViolet:hover {
-  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  background-image: linear-gradient(to bottom right, rgba(255, 121, 218, 0.7), rgba(147, 86, 220, 0.7));
 }
 
 .btnViolet p {
@@ -644,6 +644,9 @@ KEYFRAMES
   */
   .accManual__pill {
     width: 80% !important;
+  }
+  .btnViolet:active {
+    background-image: linear-gradient(to bottom right, rgba(255, 121, 218, 0.7), rgba(147, 86, 220, 0.7));
   }
   .heartIcon {
     flex: 1;
