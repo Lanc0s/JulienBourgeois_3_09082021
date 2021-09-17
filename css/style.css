@@ -211,11 +211,13 @@ Navbar & Manual
   border-radius: 20px/20px;
   color: white;
   margin-bottom: 1em;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
 
 .btnViolet:hover {
   background-image: linear-gradient(to bottom right, rgba(255, 121, 218, 0.7), rgba(147, 86, 220, 0.7));
+  box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.4);
 }
 
 .btnViolet p {
@@ -362,7 +364,7 @@ Restaurant's pages
 }
 
 .heartIcon:hover .likedHeart {
-  opacity: 1;
+  animation: heartfull 2s forwards;
 }
 
 .heartIcon:hover .unlikedHeart {
@@ -564,6 +566,20 @@ KEYFRAMES
 ************************************************************
 ************************************************************************
 *********/
+@keyframes heartfull {
+  0% {
+    opacity: 0;
+    color: #ff79da;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    color: #9356dc;
+  }
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -673,6 +689,7 @@ KEYFRAMES
   }
   .btnViolet:active {
     background-image: linear-gradient(to bottom right, rgba(255, 121, 218, 0.7), rgba(147, 86, 220, 0.7));
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.4);
   }
   .heartIcon {
     flex: 1;
