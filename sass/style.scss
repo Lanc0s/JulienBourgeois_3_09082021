@@ -8,7 +8,7 @@ Général
 ***************************************************/
 html,
 body {
-  background-color: #ffffff;
+  background-color: #f6f6f6;
   height: 100%;
   margin: 0 auto;
   padding: 0;
@@ -140,11 +140,13 @@ Navbar & Manual
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-bottom: 1em;
   &__container {
     width: 66%;
   }
 }
 .accManual {
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,7 +212,10 @@ Navbar & Manual
 .titre {
   margin-left: 1em;
   &__restaurant {
-    margin-bottom: -2em;
+    margin-bottom: 0;
+  }
+  &__manual {
+    margin-left: -1em;
   }
 }
 /************************************************************
@@ -604,6 +609,9 @@ KEYFRAMES
     margin: 100em !important;
   }
   */
+  .navExplore {
+    background-color: #f6f6f6;
+  }
   .accManual__pill {
     width: 80% !important;
   }
