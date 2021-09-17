@@ -509,17 +509,17 @@ Restaurant's pages
 
 .slide2 {
   transition: 0.5s;
-  animation: entrance 3s;
+  animation: entrance 2.22s;
 }
 
 .slide3 {
   transition: 0.5s;
-  animation: entrance 4s;
+  animation: entrance 2.33s;
 }
 
 .slide4 {
   transition: 0.5s;
-  animation: entrance 5s;
+  animation: entrance 2.44s;
 }
 
 /**********************************************************
