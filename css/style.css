@@ -146,11 +146,14 @@ Navbar & Manual
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-bottom: 1em;
 }
 
 .navExplore__container {
   width: 66%;
+}
+
+.navExplore__btn {
+  width: 15em;
 }
 
 .accManual {
@@ -173,6 +176,10 @@ Navbar & Manual
   border-radius: 15px;
   margin-bottom: 1em;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.accManual__pill:hover {
+  background-color: #f5edff;
 }
 
 .accManual__pill__number {
@@ -200,10 +207,10 @@ Navbar & Manual
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 15em;
-  height: 2em;
+  height: 2.2em;
   border-radius: 20px/20px;
   color: white;
+  margin-bottom: 1em;
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
 
@@ -216,8 +223,9 @@ Navbar & Manual
   vertical-align: middle;
 }
 
-.titre {
-  margin-left: 1em;
+.btn--commander {
+  font-size: 0.9em;
+  width: 10em;
 }
 
 .titre__restaurant {
@@ -239,6 +247,13 @@ Cards Restaurant
 .accRestaurant {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.accRestaurant--container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
