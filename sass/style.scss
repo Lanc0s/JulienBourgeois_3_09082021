@@ -648,6 +648,9 @@ KEYFRAMES
   }
   .accManual__pill {
     width: 80% !important;
+    &:active {
+      background-color: #f5edff;
+    }
   }
   .btnViolet:active {
     background-image: linear-gradient(
