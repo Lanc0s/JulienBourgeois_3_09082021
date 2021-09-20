@@ -101,6 +101,7 @@ Navbar & Manual
   z-index: 1;
   &--fleche {
     margin-left: 1em;
+    text-decoration: none;
   }
   &--img {
     width: 100%;
@@ -203,12 +204,7 @@ Navbar & Manual
     $colorprimaire
   );
   &:hover {
-    background-image: linear-gradient(
-      to bottom right,
-      rgba(255, 121, 218, 0.7),
-      rgba(147, 86, 220, 0.7)
-    );
-    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.4);
+    animation: enlightment 0.5s forwards ease-in;
   }
   p {
     display: inline;
@@ -595,6 +591,19 @@ KEYFRAMES
     width: 4.5em;
   }
 }
+@keyframes enlightment {
+  from {
+    opacity: 1;
+  }
+  to {
+    background-image: linear-gradient(
+      to bottom right,
+      rgba(255, 121, 218, 0.7),
+      rgba(147, 86, 220, 0.7)
+    );
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.4);
+  }
+}
 
 /************************************************************
 ************************************************************
@@ -653,12 +662,7 @@ KEYFRAMES
     }
   }
   .btnViolet:active {
-    background-image: linear-gradient(
-      to bottom right,
-      rgba(255, 121, 218, 0.7),
-      rgba(147, 86, 220, 0.7)
-    );
-    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.4);
+    animation: enlightment forwards ease-in;
   }
   .heartIcon {
     flex: 1;
