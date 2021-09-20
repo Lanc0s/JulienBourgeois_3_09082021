@@ -204,6 +204,7 @@ Navbar & Manual
     $colorprimaire
   );
   &:hover {
+    cursor: pointer;
     animation: enlightment 0.5s forwards ease-in;
   }
   p {
